@@ -1,0 +1,84 @@
+stages:
+  features:
+    foreach:
+    - opensmile
+    - deepspectrum
+    do:
+      cmd: ./runIn default ./src/features/${item}.py
+      deps:
+      - ./dist/wav
+      params:
+      - ${item}
+      outs:
+      - ./dist/features/${item}
+  xbow:
+    cmd: ./runIn default ./src/features/xbow.py
+    deps:
+    - ./dist/features/opensmile
+    outs:
+    - ./dist/features/xbow
+    params:
+    - xbow
+    - opensmile.featureSet
+  svm:
+    foreach:
+    - opensmile
+    - deepspectrum
+    - audeep
+    - xbow
+    do:
+      cmd: ./runIn default ./src/ml/svm.py ${item}
+      deps:
+      - ./dist/features/${item}
+      - ./dist/lab
+      - ./src/ml/svm.py
+      outs:
+      - ./results/svm/${item}
+      metrics:
+      - ./metrics/svm/${item}/metrics.yaml
+  cm:
+    cmd: ./runIn default ./src/visualisations/cm.py
+    deps:
+    - ./results
+    - ./src/visualisations/cm.py
+    outs:
+    - ./visualisations/cms
+  audeep_spectrograms:
+    cmd: ./runIn default ./src/features/audeep/spectrograms.py
+    deps:
+    - ./dist/wav
+    - ./src/features/audeep/spectrograms.py
+    params:
+    - audeep.spectrograms
+    outs:
+    - ./audeep_workspace/spectrograms
+  audeep_autoencoder:
+    cmd: ./runIn default ./src/features/audeep/autoencoder.py
+    deps:
+    - ./audeep_workspace/spectrograms
+    params:
+    - audeep.autoencoder
+    outs:
+    - ./audeep_workspace/autoencoder
+  audeep_representations:
+    cmd: ./runIn default ./src/features/audeep/representations.py
+    deps:
+    - ./audeep_workspace/autoencoder
+    outs:
+    - ./audeep_workspace/representations
+  audeep_export:
+    cmd: ./runIn default ./src/features/audeep/export.py
+    deps:
+    - ./audeep_workspace/representations
+    outs:
+    - ./dist/features/audeep
+  fusion:
+    cmd: ./runIn default ./src/late_fusion.py
+    deps:
+    - results/svm/
+    params:
+    - fusion
+    outs:
+    - results/fusion/
+    metrics:
+    - metrics/fusion/metrics.yaml
