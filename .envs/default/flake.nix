@@ -1,7 +1,6 @@
 {
   description = "CUDA enabled Deep Learning Shell";
 
-  # inputs.nixpkgs.url = "nixpkgs/release-21.11";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.flake-compat = {

@@ -133,21 +133,6 @@
         "type": "github"
       }
     },
-    "flake-utils_6": {
-      "locked": {
-        "lastModified": 1601282935,
-        "narHash": "sha256-WQAFV6sGGQxrRs3a+/Yj9xUYvhTpukQJIcMbIi7LCJ4=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "588973065fce51f4763287f0fda87a174d78bf48",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "latest": {
       "locked": {
         "lastModified": 1641887635,
@@ -215,11 +200,19 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1637687243,
         "narHash": "sha256-Qm0hPR9ZT1EP7lRW4udAPeb4yv6D2ONcw9ayterTP18=",
         "owner": "DavHau",
         "repo": "mach-nix",
         "rev": "31b21203a1350bff7c541e9dfdd4e07f76d874be",
+=======
+        "lastModified": 1648436428,
+        "narHash": "sha256-pDXf4Pgh1sGMSNpLjYnb2+WLqYYuRZxNs4OuOfNS8ik=",
+        "owner": "DavHau",
+        "repo": "mach-nix",
+        "rev": "86c3111786742fcc4dfdca2e124bcea10e05a4e6",
+>>>>>>> 43a4c3e (Initial commit.)
         "type": "github"
       },
       "original": {
@@ -228,6 +221,7 @@
         "type": "github"
       }
     },
+<<<<<<< HEAD
     "mach-nix_4": {
       "inputs": {
         "flake-utils": "flake-utils_6",
@@ -247,6 +241,8 @@
         "type": "indirect"
       }
     },
+=======
+>>>>>>> 43a4c3e (Initial commit.)
     "nixpkgs": {
       "locked": {
         "lastModified": 1641887635,
@@ -277,6 +273,7 @@
         "type": "indirect"
       }
     },
+<<<<<<< HEAD
     "nixpkgsPy36_2": {
       "locked": {
         "lastModified": 1601475821,
@@ -292,6 +289,8 @@
         "type": "indirect"
       }
     },
+=======
+>>>>>>> 43a4c3e (Initial commit.)
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1639256808,
@@ -354,6 +353,7 @@
         "type": "github"
       }
     },
+<<<<<<< HEAD
     "nixpkgs_6": {
       "locked": {
         "lastModified": 1615259932,
@@ -385,6 +385,8 @@
         "type": "indirect"
       }
     },
+=======
+>>>>>>> 43a4c3e (Initial commit.)
     "nvfetcher": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -459,6 +461,7 @@
       }
     },
     "pypi-deps-db_4": {
+<<<<<<< HEAD
       "inputs": {
         "mach-nix": "mach-nix_4",
         "nixpkgs": "nixpkgs_7",
@@ -487,6 +490,15 @@
         "owner": "DavHau",
         "repo": "pypi-deps-db",
         "rev": "ab522f2d3255789f1ef97fa7c83d4342be156e67",
+=======
+      "flake": false,
+      "locked": {
+        "lastModified": 1648629195,
+        "narHash": "sha256-k7KO3iBsvNo1Z07CASqg6NbJ/trm0o4sB9QkCcMtZHQ=",
+        "owner": "DavHau",
+        "repo": "pypi-deps-db",
+        "rev": "9cbdfbb16a252f81d9754877d65010f214f110e3",
+>>>>>>> 43a4c3e (Initial commit.)
         "type": "github"
       },
       "original": {
@@ -511,6 +523,7 @@
         "type": "github"
       }
     },
+<<<<<<< HEAD
     "pypiIndex_2": {
       "flake": false,
       "locked": {
@@ -527,6 +540,8 @@
         "type": "github"
       }
     },
+=======
+>>>>>>> 43a4c3e (Initial commit.)
     "root": {
       "inputs": {
         "eihw-packages": "eihw-packages",
