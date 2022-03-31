@@ -54,6 +54,7 @@
           };
           devShell = pkgs.mkShell {
             inherit name;
+            PYTHONUNBUFFERED=1;
             shellHook = ''
               export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath systemDependencies.missingLibs}:$LD_LIBRARY_PATH";
               unset SOURCE_DATE_EPOCH

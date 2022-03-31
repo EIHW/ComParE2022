@@ -1,12 +1,8 @@
 black
 dvc
 flake8
-librosa
-matplotlib
 pandas
 pip
-pycm
-PyYAML==5.1
 scikit-learn
 scipy
-seaborn
+torch
