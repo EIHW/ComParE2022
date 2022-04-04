@@ -24,7 +24,7 @@ Each registered team has up to five (5) submissions for this Sub-Challenge.
 To submit your csv files, login on the website: http://www5.cs.fau.de/compare/
 with the credentials you received from the organisers.
 
-More information on the challenge: >http://www.compare.openaudio.eu/compare2022/
+More information on the challenge: http://www.compare.openaudio.eu/compare2022/
 
 Please note that each team needs to submit at least one regular paper to the ComParE 2022 Special Session at ACM Multimedia 2022. 
 
