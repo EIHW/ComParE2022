@@ -5,7 +5,7 @@ The Human Activity Recognition Sub-Challenge (HARS) is a classification task tha
 
 The Sub-Challenge baseline measure is the Unweighted Average Recall (UAR). 
 
-This Sub-Challenge is based on the harAGE corpus, collected in the framework of the European Union's Horizon 2020 research and innovation programme under grant agreement No.\,826506 (sustAGE).
+This Sub-Challenge is based on the harAGE corpus, collected in the framework of the European Union's Horizon 2020 research and innovation programme under grant agreement No. 826506 (sustAGE).
 
 The task is an 8-class classification problem, comprising the activities 'lying', 'sitting', 'standing', 'washingHands', 'walking', 'running', 'stairsClimbing', and 'cycling'. The baseline system proposes and end-to-end approach fusing the embedded representations learnt from the heart rate, pedometer, and accelerometer sensor measurements via concatenation. 
 
