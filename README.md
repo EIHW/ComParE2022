@@ -75,7 +75,7 @@ python src/main_modelling.py -m [modalities] -t baseline -tID [teamID] -sID [sub
 
 ```
 
-The argument `modalities` determines which sensor measurements the dataloader should load (`hr`, `steps`, or `xyz`). Please check the `src/reproduce_baseline.py` script for an exact example of the API call. 
+The argument `modalities` determines which sensor measurements the dataloader should load (`hr` -- for heart rate, `steps` -- for pedometer, or `xyz` -- for accelerometer measurements). Please check the `src/reproduce_baseline.py` script for an exact example of the API call. 
 
 If everything goes well, a folder `results/` will be created, with the structure
 ```
