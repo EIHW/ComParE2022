@@ -33,9 +33,13 @@ This paper may include your methods and results for several Sub-Challenges.
 ## General Installation Instruction 
 ### Linux
 If you have conda installed (either miniconda or anaconda), you can execute
-`conda env create -f .env-ymls/ComParE_harAGE_env.yml`
+```bash
+conda env create -f .env-ymls/ComParE_harAGE_env.yml
+```
 to setup the virtual environment required for reproducing the baseline experiments. You can activate the `ComParE_harAGE` environment with
-`source ./activate ComParE_harAGE`
+```bash
+source ./activate ComParE_harAGE
+```
 
 ## Data
 Make sure you are on the correct branch regarding your chosen sub-challenge. Otherwise (with the virtual environment activated), checkout the desired branch. Move or copy the data from the challenge package into the project's root directory, such that the `dist` folder lies on the same level as `src`. The layout should look like this:
@@ -67,7 +71,7 @@ python src/reproduce_baseline.py
 or to reproduce individual configurations:
 
 ```bash
-python src/.py -m [modalities] -t baseline -tID [teamID] -sID [submissionID]
+python src/main_modelling.py -m [modalities] -t baseline -tID [teamID] -sID [submissionID]
 
 ```
 
@@ -80,4 +84,4 @@ results/
   |-- Model_baseline_ResultsReports/
 ```
 
-The `Model_baseline_ResultsReports` directory stores the resulting `.pth` model and a `.json` file summarising the ground truth and the inferred activities on the development set. The `Model_baseline_ResultsReports` directory stores a `.txt` file with the UAR scored on the development partition. 
+The `Model_baseline_ResultsReports` directory stores the resulting `.pth` model, and a `.json` file summarising the ground truth and the inferred activities on the development set. The `Model_baseline_ResultsReports` directory stores a `.txt` file with the UAR scored on the development partition. 
