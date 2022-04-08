@@ -1,6 +1,0 @@
-[submodule "openXBOW"]
-	path = openXBOW
-	url = https://github.com/openXBOW/openXBOW.git
-[submodule "opensmile"]
-	path = opensmile
-	url = https://github.com/audeering/opensmile.git

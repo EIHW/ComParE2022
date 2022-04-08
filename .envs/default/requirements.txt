@@ -1,8 +1,0 @@
-black
-dvc
-flake8
-pandas
-pip
-scikit-learn
-scipy
-torch
