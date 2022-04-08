@@ -1,7 +1,7 @@
-# Baseline scripts for the ACM MM - ComParE 2022 Human Activity Recognition Sub-Challenge
+# Baseline scripts for the ACM Multimedia - ComParE 2022 Human Activity Recognition from Smartwatch Sensor Data Sub-Challenge
 
 
-The Human Activity Recognition Sub-Challenge (HARS) is a classification task that aims at recognising the activity participants were doing from the analysis of 20 sec of sensor measurements collected using a smartwatch. 
+The Human Activity Recognition from Smartwatch Sensor Data Sub-Challenge is a classification task that aims at recognising the activity participants were doing from the analysis of 20 sec of sensor measurements collected using a smartwatch. 
 
 The Sub-Challenge baseline measure is the Unweighted Average Recall (UAR). 
 
