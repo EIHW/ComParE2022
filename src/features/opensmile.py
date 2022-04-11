@@ -29,7 +29,7 @@ feature_set = params['featureSet']
 # base directory for audio files
 audio_base='./dist/wav'
 output_base='./dist/features/opensmile'
-wavs = glob.glob(f'{audio_base}/*.wav')
+wavs = sorted(glob.glob(f'{audio_base}/*.wav'))
 os.makedirs(output_base, exist_ok=True)
 outfile_base = os.path.join(output_base, 'features')
 if "prosody" in feature_set:

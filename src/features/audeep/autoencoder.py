@@ -5,9 +5,9 @@ from glob import glob
 from os.path import splitext, basename
 
 if __name__=="__main__":
-    with open("params/audeep.yaml") as f:
+    with open("params.yaml") as f:
         params = yaml.load(f, Loader=yaml.FullLoader)
-        params = params["autoencoder"]
+        params = params["audeep"]["autoencoder"]
     spectrogram_base = "./audeep_workspace/spectrograms"
     spectrograms = sorted(glob(f"{spectrogram_base}/*.nc"))
 

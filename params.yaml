@@ -1,6 +1,6 @@
 # Parameters for the experiment should be defined here and the contents read by the respective scripts.
 deepspectrum:
-  extractionNetwork: densenet121
+  extractionNetwork: densenet201
   plotMode: mel
   melBands: 128
   colourMap: viridis
@@ -27,10 +27,10 @@ audeep:
     mel_bands: 128
     fixed_length: 3
     clip_below_values:
-      - -30
-      - -45
-      - -60
-      - -75
+    - -30
+    - -45
+    - -60
+    - -75
   autoencoder:
     num_layers: 2
     num_units: 256

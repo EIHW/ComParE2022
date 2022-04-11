@@ -30,9 +30,9 @@ from tqdm import tqdm
 
 if __name__ == "__main__":
     params = {}
-    with open("params/audeep.yaml") as f:
+    with open("params.yaml") as f:
         params = yaml.load(f, Loader=yaml.FullLoader)
-        params = params["spectrograms"]
+        params = params["audeep"]["spectrograms"]
 
     workspace = "audeep_workspace"
 
