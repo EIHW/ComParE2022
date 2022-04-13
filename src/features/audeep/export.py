@@ -25,9 +25,9 @@ from tqdm import tqdm
 
 
 if __name__ == "__main__":
-    with open("params/audeep.yaml") as f:
+    with open("params.yaml") as f:
         params = yaml.load(f, Loader=yaml.FullLoader)
-        to_export = params["export"]
+        to_export = params["audeep"]["export"]
     workspace = "audeep_workspace"
 
     # base directory of autoencoder runs

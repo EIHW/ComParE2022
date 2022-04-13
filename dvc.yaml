@@ -42,7 +42,8 @@ stages:
     - ./results
     - ./src/visualisations/cm.py
     outs:
-    - ./visualisations/cms
+    - ./visualisations/cms:
+        cache: false
   audeep_spectrograms:
     cmd: ./runIn default ./src/features/audeep/spectrograms.py
     deps:
@@ -70,6 +71,8 @@ stages:
     cmd: ./runIn default ./src/features/audeep/export.py
     deps:
     - ./audeep_workspace/representations
+    params:
+    - audeep.export
     outs:
     - ./dist/features/audeep
   fusion:

@@ -1,6 +1,6 @@
 # Parameters for the experiment should be defined here and the contents read by the respective scripts.
 deepspectrum:
-  extractionNetwork: densenet121
+  extractionNetwork: densenet169
   plotMode: mel
   melBands: 128
   colourMap: viridis
@@ -11,7 +11,7 @@ opensmile:
   featureSet: compare16/ComParE_2016.conf
 xbow:
   csize: 2000
-  num_assignments: 200
+  num_assignments: 10
 
 fusion:
   to_fuse:
@@ -27,12 +27,12 @@ audeep:
     mel_bands: 128
     fixed_length: 3
     clip_below_values:
-      - -30
-      - -45
-      - -60
-      - -75
+    - -30
+    - -45
+    - -60
+    - -75
   autoencoder:
-    num_layers: 2
+    num_layers: 3
     num_units: 256
     cell: GRU
     bidirectional_encoder: false
@@ -41,4 +41,4 @@ audeep:
     batch_size: 512
     learning_rate: 0.001
     keep_prob: 0.8
-  export: fused # can be either "fused" or any of the clip_below_values
+  export: -75   # can be either "fused" or any of the clip_below_values
