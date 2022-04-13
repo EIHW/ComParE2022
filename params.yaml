@@ -27,10 +27,17 @@ audeep:
     mel_bands: 128
     fixed_length: 3
     clip_below_values:
+<<<<<<< HEAD
     - -30
     - -45
     - -60
     - -75
+=======
+      - -30
+      - -45
+      - -60
+      - -75
+>>>>>>> ea4e628be74c8d4acb66b3efbe295fdb5b71f632
   autoencoder:
     num_layers: 2
     num_units: 256

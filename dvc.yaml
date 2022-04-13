@@ -42,8 +42,12 @@ stages:
     - ./results
     - ./src/visualisations/cm.py
     outs:
+<<<<<<< HEAD
     - ./visualisations/cms:
         cache: false
+=======
+    - ./visualisations/cms
+>>>>>>> ea4e628be74c8d4acb66b3efbe295fdb5b71f632
   audeep_spectrograms:
     cmd: ./runIn default ./src/features/audeep/spectrograms.py
     deps:
