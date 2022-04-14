@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   features@opensmile:
-    cmd: ./runIn default ./src/features/opensmile.py
+    cmd: python src/features/opensmile.py
     deps:
     - path: ./dist/wav
       md5: 6a19fd0e6ce397d26db84382ad1d8fb8.dir
@@ -17,7 +17,7 @@ stages:
       size: 2673594511
       nfiles: 2
   features@deepspectrum:
-    cmd: ./runIn default ./src/features/deepspectrum.py
+    cmd: python src/features/deepspectrum.py
     deps:
     - path: ./dist/wav
       md5: 6a19fd0e6ce397d26db84382ad1d8fb8.dir
@@ -38,7 +38,7 @@ stages:
       size: 106433533
       nfiles: 1
   audeep_spectrograms:
-    cmd: ./runIn default ./src/features/audeep/spectrograms.py
+    cmd: python src/features/audeep/spectrograms.py
     deps:
     - path: ./dist/wav
       md5: 6a19fd0e6ce397d26db84382ad1d8fb8.dir
@@ -65,7 +65,7 @@ stages:
       size: 698815072
       nfiles: 4
   audeep_autoencoder:
-    cmd: ./runIn default ./src/features/audeep/autoencoder.py
+    cmd: python src/features/audeep/autoencoder.py
     deps:
     - path: ./audeep_workspace/spectrograms
       md5: 7c73f000957e473f8ab916c35eb532e2.dir
@@ -101,7 +101,7 @@ stages:
       size: 152669018
       nfiles: 5
   xbow:
-    cmd: ./runIn default ./src/features/xbow.py
+    cmd: python src/features/xbow.py
     deps:
     - path: ./dist/features/opensmile
       md5: f324921fd39fee8bd3983a204f0df573.dir
@@ -119,7 +119,7 @@ stages:
       size: 70261255
       nfiles: 2
   audeep_export:
-    cmd: ./runIn default ./src/features/audeep/export.py
+    cmd: python src/features/audeep/export.py
     deps:
     - path: ./audeep_workspace/representations
       md5: d2f63637b69b46e1f035b307bcea09ee.dir
@@ -134,7 +134,7 @@ stages:
       size: 219826327
       nfiles: 1
   svm@opensmile:
-    cmd: ./runIn default ./src/ml/svm.py opensmile
+    cmd: python src/ml/svm.py opensmile
     deps:
     - path: ./dist/features/opensmile
       md5: f324921fd39fee8bd3983a204f0df573.dir
@@ -156,7 +156,7 @@ stages:
       size: 93599
       nfiles: 6
   svm@deepspectrum:
-    cmd: ./runIn default ./src/ml/svm.py deepspectrum
+    cmd: python src/ml/svm.py deepspectrum
     deps:
     - path: ./dist/features/deepspectrum
       md5: caf6520b49bb59a528f1d1b1b43b2df0.dir
@@ -178,7 +178,7 @@ stages:
       size: 94156
       nfiles: 6
   svm@audeep:
-    cmd: ./runIn default ./src/ml/svm.py audeep
+    cmd: python src/ml/svm.py audeep
     deps:
     - path: ./dist/features/audeep
       md5: b4baae96390d93076ffe3ad0d1dcd148.dir
@@ -200,7 +200,7 @@ stages:
       size: 96761
       nfiles: 6
   svm@xbow:
-    cmd: ./runIn default ./src/ml/svm.py xbow
+    cmd: python src/ml/svm.py xbow
     deps:
     - path: ./dist/features/xbow
       md5: 75ab4348af28d08906f9aa8c710e8e0b.dir
@@ -222,7 +222,7 @@ stages:
       size: 94655
       nfiles: 6
   fusion:
-    cmd: ./runIn default ./src/late_fusion.py
+    cmd: python src/late_fusion.py
     deps:
     - path: results/svm/
       md5: 68a1fd5b79e6b48460a92d19f15fc376.dir
@@ -245,7 +245,7 @@ stages:
       size: 67838
       nfiles: 3
   cm:
-    cmd: ./runIn default ./src/visualisations/cm.py
+    cmd: python src/visualisations/cm.py
     deps:
     - path: ./results
       md5: 1ddb060462edf034175ae65dd0e88c88.dir
@@ -256,11 +256,11 @@ stages:
       size: 2948
     outs:
     - path: ./visualisations/cms
-      md5: 89796e48dc8f61f8d0fb3d800bf22568.dir
+      md5: 685cb0cccf6c66205b336eeb7e64c1bb.dir
       size: 613576
       nfiles: 10
   audeep_representations:
-    cmd: ./runIn default ./src/features/audeep/representations.py
+    cmd: python src/features/audeep/representations.py
     deps:
     - path: ./audeep_workspace/autoencoder
       md5: 81ce006bb536aa9110954e7a899404fd.dir
@@ -271,3 +271,5 @@ stages:
       md5: d2f63637b69b46e1f035b307bcea09ee.dir
       size: 152669018
       nfiles: 5
+  test:
+    cmd: python -c "import numpy"

@@ -1,5 +1,5 @@
 {
-  description = "CUDA enabled Deep Learning Shell";
+  description = "Nix shell for ComParE22 KSF-C";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
@@ -43,42 +43,60 @@
             inherit pkgs;
             pypiData = pypi-deps-db;
           };
+          python = (import ./python.nix { inherit pkgs; mach-nix=machNix;});
           systemDependencies = import ./system-dependencies.nix { inherit pkgs; };
+          additionalApplications = pkgs.buildEnv {
+            inherit name;
+            paths = systemDependencies.additionalPackages;
+          };
+                  
         in
         rec {
-          defaultPackage = pkgs.buildEnv {
-            inherit name;
-            paths = [
-              (import ./python.nix { inherit pkgs; mach-nix=machNix;})
-            ] ++ systemDependencies.additionalPackages;
-          };
           devShell = pkgs.mkShell {
             inherit name;
+            PYTHONPATH = "${python}/lib/python3.8/site-packages";
+            PYTHONUNBUFFERED = 1;
             shellHook = ''
               export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath systemDependencies.missingLibs}:$LD_LIBRARY_PATH";
               unset SOURCE_DATE_EPOCH
             '';
             # ${pkgs.cudaPackages.cudatoolkit_11_2}/lib:
             buildInputs = [
-              defaultPackage
+              python
+              additionalApplications
+              pkgs.jre_minimal
             ];
           };
           packages = flake-utils.lib.flattenTree {
             shell2docker = dockerImage;
           };
-          dockerImage = pkgs.dockerTools.buildLayeredImage {
-            name = "mauriceg/DeepLearningGPU";
+          dockerImage = 
+          let
+              env-shim = pkgs.runCommand "env-shim" {} ''
+                mkdir -p $out/usr/bin
+                ln -s ${pkgs.coreutils}/bin/env $out/usr/bin/env
+              '';
+          in
+          pkgs.dockerTools.buildLayeredImage {
+            name = "mauricege/ComParE22";
             tag = "latest";
+            
             contents = [
+              python
               pkgs.bash
               pkgs.coreutils
-              defaultPackage
+              pkgs.which
+              additionalApplications
               systemDependencies.missingLibs
+              pkgs.jre_minimal
+              env-shim
             ];
             config = {
-              Cmd = [ "dvc" "repro" ];
+              Cmd = [ "bash" ];
               Env = [
                 "LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath systemDependencies.missingLibs}:/usr/lib64/:$LD_LIBRARY_PATH"
+                "PYTHONPATH=${python}/lib/python3.8/site-packages"
+                "PYTHONBUFFERED=1"
               ];
             };
           };
