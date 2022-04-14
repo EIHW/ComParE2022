@@ -1,0 +1,11 @@
+dvc==2.10.0
+librosa==0.7.2
+matplotlib==3.5.1
+pandas==1.3.5
+pycm==3.4
+PyYAML==5.1
+scikit-learn==1.0.2
+scipy==1.7.3
+seaborn==0.11.2
+DeepSpectrum==0.6.9
+auDeep==0.9.4
