@@ -85,3 +85,22 @@ results/
 ```
 
 The `Model_baseline_ResultsReports` directory stores the resulting `.pth` model, and a `.json` file summarising the ground truth and the inferred activities on the development set. The `Model_baseline_ResultsReports` directory stores a `.txt` file with the UAR scored on the development partition. 
+
+## Citation
+
+If you use the code from this repository, you are kindly asked to cite the following paper.
+
+> Björn W. Schuller, Anton Batliner, Shahin Amiriparian, Christian Bergler, Maurice Gerczuk, Natalie Holz, Sebastian Bayerl, Korbinian Riedhammer, Adria Mallol-Ragolta, Maria Pateraki, Harry Coppock, Ivan Kiskin, Stephen Roberts, "The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, & Mosquitos," *Proceedings of ACM Multimedia*, ACM, Lisbon, Portugal, 2022.
+
+```
+@inproceedings{Schuller22-TAM,
+  author = {Bj\”orn W.\ Schuller and Anton Batliner and Shahin Amiriparian and Christian Bergler and Maurice Gerczuk and Natalie Holz and Sebastian Bayerl and Korbinian Riedhammer and Adria Mallol-Ragolta and Maria Pateraki and Harry Coppock and Ivan Kiskin and Stephen Roberts},
+  title = {{The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, \& Mosquitos}},
+  booktitle = {{Proceedings of ACM Multimedia}},
+  year = {2022},
+  address = {Lisbon, Portugal},
+  publisher = {ACM},
+  month = {October},
+  note = {to appear},
+}
+```
