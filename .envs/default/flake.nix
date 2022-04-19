@@ -1,5 +1,5 @@
 {
-  description = "Nix shell for ComParE22 KSF-C";
+  description = "Nix shell for ComParE22";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
@@ -54,7 +54,7 @@
         rec {
           devShell = pkgs.mkShell {
             inherit name;
-            PYTHONPATH = "${python}/lib/python3.8/site-packages";
+            PYTHONPATH = "${python}/${python.sitePackages}";
             PYTHONUNBUFFERED = 1;
             shellHook = ''
               export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath systemDependencies.missingLibs}:$LD_LIBRARY_PATH";
@@ -95,7 +95,7 @@
               Cmd = [ "bash" ];
               Env = [
                 "LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath systemDependencies.missingLibs}:/usr/lib64/:$LD_LIBRARY_PATH"
-                "PYTHONPATH=${python}/lib/python3.8/site-packages"
+                "PYTHONPATH=${python}/${python.sitePackages}"
                 "PYTHONBUFFERED=1"
               ];
             };
