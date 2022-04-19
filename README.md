@@ -1,4 +1,4 @@
-# ComParE22 - Kassel State of Fluency Challenge (KSoF-C)
+# ComParE22 - Kassel State of Fluency Challenge (KSF-C)
 This repository provides the code for running the official baselines for the Stuttering subchallenge of ComParE22.
 
 ## Getting the code
