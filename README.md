@@ -3,21 +3,21 @@ This repository provides the code for running the official baselines for the Stu
 
 ```bibtex
 @inproceedings{Schuller21-TI2,
-author = {Bj\”orn W.\ Schuller and Anton Batliner and Shahin Amiriparian and Christian Bergler and Maurice Gerczuk and Natalie Holz and Sebastian Bayerl and Korbinian Riedhammer and Adria Mallol-Ragolta and Maria Pateraki and Harry Coppock and Ivan Kiskin and Stephen Roberts},
-title = {{The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, \& Mosquitos}},
-booktitle = {{Proceedings ACM Multimedia 2022}},
-year = {2022},
-address = {Lisbon, Portugal},
-publisher = {ISCA},
-month = {October},
-note = {to appear},
+    author = {Bj\”orn W.\ Schuller and Anton Batliner and Shahin Amiriparian and Christian Bergler and Maurice Gerczuk and Natalie Holz and Sebastian Bayerl and Korbinian Riedhammer and Adria Mallol-Ragolta and Maria Pateraki and Harry Coppock and Ivan Kiskin and Stephen Roberts},
+    title = {{The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, \& Mosquitos}},
+    booktitle = {{Proceedings ACM Multimedia 2022}},
+    year = {2022},
+    address = {Lisbon, Portugal},
+    publisher = {ISCA},
+    month = {October},
+    note = {to appear},
 }
 ```
 
 ## Getting the code
 Clone this repository together with its submodules and checkout the correct branch:
 ```bash
-git clone --recurse-submodules --branch KSoF-C https://github.com/EIHW/ComParE2022
+git clone --recurse-submodules --branch KSF-C https://github.com/EIHW/ComParE2022
 ```
 
 ## Installation
@@ -58,6 +58,17 @@ Copy the contents of the challenge package to `./dist`. The folder structure sho
 │   └── wav
 .
 ```
+You can now either choose to either reproduce the whole pipeline (including feature extraction) or only the SVM classification. If you want to skip feature extraction, run 
+```bash
+dvc commit features
+```
+and confirm everything with `y`.
+
+In either way, now execute
+```bash
+dvc repro
+```
+
 
 ## Best results on the development partition: 30.2% UAR 
 ![alt text](visualisations/cms/svm/opensmile/cm_devel.png)

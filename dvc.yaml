@@ -85,5 +85,3 @@ stages:
     - results/fusion/
     metrics:
     - metrics/fusion/metrics.yaml
-  test:
-    cmd: python -c "import numpy"
