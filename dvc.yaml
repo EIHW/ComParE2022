@@ -4,7 +4,7 @@ stages:
     - opensmile
     - deepspectrum
     do:
-      cmd: ./runIn default ./src/features/${item}.py
+      cmd: python src/features/${item}.py
       deps:
       - ./dist/wav
       params:
@@ -12,7 +12,7 @@ stages:
       outs:
       - ./dist/features/${item}
   xbow:
-    cmd: ./runIn default ./src/features/xbow.py
+    cmd: python src/features/xbow.py
     deps:
     - ./dist/features/opensmile
     outs:
@@ -27,7 +27,7 @@ stages:
     - audeep
     - xbow
     do:
-      cmd: ./runIn default ./src/ml/svm.py ${item}
+      cmd: python src/ml/svm.py ${item}
       deps:
       - ./dist/features/${item}
       - ./dist/lab
@@ -37,7 +37,7 @@ stages:
       metrics:
       - ./metrics/svm/${item}/metrics.yaml
   cm:
-    cmd: ./runIn default ./src/visualisations/cm.py
+    cmd: python src/visualisations/cm.py
     deps:
     - ./results
     - ./src/visualisations/cm.py
@@ -45,7 +45,7 @@ stages:
     - ./visualisations/cms:
         cache: false
   audeep_spectrograms:
-    cmd: ./runIn default ./src/features/audeep/spectrograms.py
+    cmd: python src/features/audeep/spectrograms.py
     deps:
     - ./dist/wav
     - ./src/features/audeep/spectrograms.py
@@ -54,7 +54,7 @@ stages:
     outs:
     - ./audeep_workspace/spectrograms
   audeep_autoencoder:
-    cmd: ./runIn default ./src/features/audeep/autoencoder.py
+    cmd: python src/features/audeep/autoencoder.py
     deps:
     - ./audeep_workspace/spectrograms
     params:
@@ -62,21 +62,21 @@ stages:
     outs:
     - ./audeep_workspace/autoencoder
   audeep_representations:
-    cmd: ./runIn default ./src/features/audeep/representations.py
+    cmd: python src/features/audeep/representations.py
     deps:
     - ./audeep_workspace/autoencoder
     outs:
     - ./audeep_workspace/representations
   audeep_export:
-    cmd: ./runIn default ./src/features/audeep/export.py
-    deps:
-    - ./audeep_workspace/representations
+    cmd: python src/features/audeep/export.py
     params:
     - audeep.export
+    deps:
+    - ./audeep_workspace/representations
     outs:
     - ./dist/features/audeep
   fusion:
-    cmd: ./runIn default ./src/late_fusion.py
+    cmd: python src/late_fusion.py
     deps:
     - results/svm/
     params:

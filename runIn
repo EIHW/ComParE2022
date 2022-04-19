@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-nixShell=$1
-shift
-command="$@"
-
-nix develop path:$(pwd)/.envs/$nixShell --command $command
