@@ -1,19 +1,6 @@
 # ComParE22 - Kassel State of Fluency Challenge (KSoF-C)
 This repository provides the code for running the official baselines for the Stuttering subchallenge of ComParE22.
 
-```bibtex
-@inproceedings{Schuller21-TI2,
-    author = {Bj\”orn W.\ Schuller and Anton Batliner and Shahin Amiriparian and Christian Bergler and Maurice Gerczuk and Natalie Holz and Sebastian Bayerl and Korbinian Riedhammer and Adria Mallol-Ragolta and Maria Pateraki and Harry Coppock and Ivan Kiskin and Stephen Roberts},
-    title = {{The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, \& Mosquitos}},
-    booktitle = {{Proceedings ACM Multimedia 2022}},
-    year = {2022},
-    address = {Lisbon, Portugal},
-    publisher = {ISCA},
-    month = {October},
-    note = {to appear},
-}
-```
-
 ## Getting the code
 Clone this repository together with its submodules and checkout the correct branch:
 ```bash
@@ -72,3 +59,24 @@ dvc repro
 
 ## Best results on the development partition: 30.2% UAR 
 ![alt text](visualisations/cms/svm/opensmile/cm_devel.png)
+
+
+
+## Citation
+
+If you use the code from this repository, you are kindly asked to cite the following paper.
+
+> Björn W. Schuller, Anton Batliner, Shahin Amiriparian, Christian Bergler, Maurice Gerczuk, Natalie Holz, Sebastian Bayerl, Korbinian Riedhammer, Adria Mallol-Ragolta, Maria Pateraki, Harry Coppock, Ivan Kiskin, Stephen Roberts, "The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, & Mosquitos," in *Proceedings of 30th International Conference on Multimedia*, (Lisbon, Portugal), ACM, 2022.
+
+```
+@inproceedings{Schuller22-TAM,
+  author = {Bj\”orn W.\ Schuller and Anton Batliner and Shahin Amiriparian and Christian Bergler and Maurice Gerczuk and Natalie Holz and Sebastian Bayerl and Korbinian Riedhammer and Adria Mallol-Ragolta and Maria Pateraki and Harry Coppock and Ivan Kiskin and Stephen Roberts},
+  title = {{The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, \& Mosquitos}},
+  booktitle = {{Proceedings of 30th International Conference on Multimedia}},
+  year = {2022},
+  address = {Lisbon, Portugal},
+  publisher = {ACM},
+  month = {October},
+  note = {to appear},
+}
+```
