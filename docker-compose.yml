@@ -1,0 +1,16 @@
+services:
+  humbug:
+    build: .
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]
+    volumes:
+      - ./data:/humbug/data
+      - ./outputs:/humbug/outputs
+      - ./models:/humbug/models
