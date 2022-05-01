@@ -43,9 +43,9 @@ default_model_weights_path = os.path.join(
 # Extra_eval and retrain_model require re-creating features.
 
 retrain_model = False  # Train model from scratch (default settings) or load default baseline
-predict_dev = False  # To control whether to create new predictions over dev A, dev B
+predict_dev = True  # To control whether to create new predictions over dev A, dev B
 extra_eval = True  # Perform evaluation over addictional feature metrics
-predict_test = True  # Perform prediction over data in /data/audio/test/
+predict_test = False  # Perform prediction over data in /data/audio/test/
 
 
 # Calculating window size based on desired min duration (sample chunks)

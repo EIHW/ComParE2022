@@ -169,9 +169,9 @@ if config.predict_dev:
 
 # Calculate challenge metrics
     do_eval("./data/predictions/dev/a", "./data/labels/dev/a",
-     filename = os.path.join(config.plot_dir, model_name + "_dev_a.png"))
+     filename = os.path.join(config.plot_dir, model_name + "_psd_dev_a.png"))
     do_eval("./data/predictions/dev/b", "./data/labels/dev/b",
-     filename = os.path.join(config.plot_dir, model_name + "_dev_b.png"))
+     filename = os.path.join(config.plot_dir, model_name + "_psd_dev_b.png"))
 
 
 if config.predict_test:

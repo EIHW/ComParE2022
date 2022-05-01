@@ -168,10 +168,11 @@ def plot_roc(name, labels, predictions, roc_score, filename, **kwargs):
 
 def plot_pr(name, labels, predictions, filename):
     # Plot precision-recall curves
-
+    
     area = average_precision_score(labels, predictions)
     print("PR-AUC: ", area)
     precision, recall, _ = precision_recall_curve(labels, predictions)
+    plt.figure(figsize=(4, 4))
     plt.plot(recall, precision)
     plt.title("AUC={0:0.4f}".format(area))
     plt.xlabel("Recall")
