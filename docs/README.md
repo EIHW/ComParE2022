@@ -3,8 +3,8 @@
 
 A challenge to discover mosquitoes from the sounds of their wingbeats within real-world field data collected in South East Tanzania. Data is recorded in demanding conditions that include rural acoustic ambience, the presence of speech, rain, other insects, and many more acoustic phenomena.
 
-* [Code submission README]()
-* [Baseline reproduction README]()
+* [Code submission instructions README](./docs/submission-instructions.md)
+* [Baseline reproduction README](./docs/baseline-reproduction.md)
 
 ### Context
 In 2020 malaria caused around 241 million cases of disease across more than 100 countries resulting in an estimated 627,000 deaths
@@ -29,14 +29,14 @@ Your participation in this challenge can directly help to address our primary re
 Our data has been laboriously curated through 6+ years of data collection, which we have split into `train`, `dev`, and `test`. All of our `test` data is recorded in people's homes from various mosquito intervention solutions (e.g. HumBug bednets as detailed in [HumBugDB](https://arxiv.org/pdf/2110.07607.pdf)), which are used as a form of aid that can additionally provide us the opportunity to monitor and detect lethal mosquitoes from the sounds of their wingbeat. As the nature of the data is sensitive, this challenge _does not provide_ the `test` data directly, however, submissions are designed to evaluate over the test data. This allows preservation of data privacy, and removes the possibility of consciously or subconsciously tuning model design with knowledge of test data.
 
 ## Submission instructions
-1. Sign End-user License Agreement (EULA) [here]
-2. Develop code according to instructions of [the submission template README](../README.md).
+1. Sign End-user License Agreement (EULA) [TBA]
+2. Develop code according to instructions of [the submission template README](./docs/submission-instructions.md).
 3. Run `make_submission.sh`
 4. Upload resulting `submission.zip` to https://humbug.aml.mindfoundry.ai/.
     1. Use the password as supplied to the e-mail supplied in the EULA
     2. A total of five submissions are allowed per participant
     3. If your code has run into issues, we will notify you. Invalid submissions will not count towards the limit of 5.
-5. Submit a paper with your methods, citing the papers as per the EULA, and the scores achieved on `dev` data with the local version of your code, to [...]
+5. Submit a paper with your methods, citing the papers as per the EULA, and the scores achieved on `dev` data with the local version of your code, to [TBA]
 6. The scores on `test` will be revealed at the end of the challenge
 
 ## Support
