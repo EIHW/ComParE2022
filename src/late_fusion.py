@@ -51,7 +51,7 @@ if __name__ == "__main__":
     ).tolist()
     ci_low, ci_high = CI(all_devel_predictions["prediction"], all_devel_predictions["true"])
     metrics["devel"]["ci_low"] = float(ci_low)
-    metrics["devel"]["ci_high"] = float(ci_low)
+    metrics["devel"]["ci_high"] = float(ci_high)
 
 
     all_test_predictions = reduce(
@@ -77,7 +77,7 @@ if __name__ == "__main__":
         ))
         ci_low, ci_high = CI(all_test_predictions["prediction"], all_test_predictions["true"])
         metrics["test"]["ci_low"] = float(ci_low)
-        metrics["test"]["ci_high"] = float(ci_low)
+        metrics["test"]["ci_high"] = float(ci_high)
         metrics["test"]["cm"] = confusion_matrix(
             all_test_predictions["true"], all_test_predictions["prediction"]
         ).tolist()
