@@ -8,7 +8,7 @@ git clone --recurse-submodules --branch KSF-C https://github.com/EIHW/ComParE202
 ```
 
 ## Installation
-To install the baselines dependencies, you can either use the nix package manager (which we used in development) or a traditional python+virtualenv setup.
+To install the baseline's dependencies, you can either use the nix package manager (which we used in development) or a traditional python+virtualenv setup.
 
 ### Nix
 If you have nix with flakes support installed on your Linux system, run:
@@ -45,7 +45,7 @@ Copy the contents of the challenge package to `./dist`. The folder structure sho
 │   └── wav
 .
 ```
-You can now either choose to either reproduce the whole pipeline (including feature extraction) or only the SVM classification. If you want to skip feature extraction, run 
+You can now either choose to reproduce the whole pipeline (including feature extraction) or only the SVM classification. If you want to skip feature extraction, run 
 ```bash
 dvc commit features
 ```
