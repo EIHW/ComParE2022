@@ -238,25 +238,25 @@ stages:
           - xbow
     outs:
     - path: metrics/fusion/metrics.yaml
-      md5: 155c10beffcdf5aea5b938fd1086e416
-      size: 650
+      md5: d44c9562bca8995e72b5d5f2d92b216a
+      size: 649
     - path: results/fusion/
-      md5: f1f514fc9ed0b13c92498505add01dbf.dir
-      size: 67838
+      md5: 341c881d809d36d5f15426f06f4b5d2b.dir
+      size: 67837
       nfiles: 3
   cm:
     cmd: python src/visualisations/cm.py
     deps:
     - path: ./results
-      md5: 1ddb060462edf034175ae65dd0e88c88.dir
-      size: 447056
+      md5: 87ec658bbe1e095a6bc617a1890b2e8a.dir
+      size: 447055
       nfiles: 29
     - path: ./src/visualisations/cm.py
       md5: fb4bbd2085039e9259ab11c0291a6dca
       size: 2948
     outs:
     - path: ./visualisations/cms
-      md5: 58b1c13f19668680a88bce331b69eb8e.dir
+      md5: 653109475fae08ca04f950cb2337ef9b.dir
       size: 613576
       nfiles: 10
   audeep_representations:

@@ -57,7 +57,17 @@ dvc repro
 ```
 
 
-## Best results on the development partition: 30.2% UAR 
+## Results
+
+| System                                | Development | Test       |
+|---------------------------------------|-------------|------------|
+| opensmile                             | 30.2        | 37.6       |
+| deepspectrum                          | 28.1        | 40.4       |
+| audeep                                | 17.7        | 25.9       |
+| xbow                                  | 26.7        | 32.1       |
+| fusion                                | 28.7        | 38.3       |
+
+### CM for best result on development partition:
 ![alt text](visualisations/cms/svm/opensmile/cm_devel.png)
 
 
