@@ -3,7 +3,7 @@
 This repository contains a fully functional baseline model for the Humbug challenge, and docker template to submit code which is automatically evaluated and scored without user access to the test data.
 The code provides a starting point for creating a submission.
 
-Please refer to [Mosquito event challenge README](./baseline-instructions.md) for more detail on how to locally run the baseline, including feature extraction, model training, and evaluation over dev data.
+Please refer to [Mosquito event challenge README](./baseline-reproduction.md) for more detail on how to locally run the baseline, including feature extraction, model training, and evaluation over dev data.
 
 
 ## Submission guidelines
@@ -31,7 +31,7 @@ Files stored in `data/audio` with the `.wav` extension.
 
 ### Expected output format
 Files stored in `data/predictions/test` with names in the form of `baseline_<threshold>.csv`, where threshold is between `[0.1, 1.0]` in increments of `0.1`.
-See `data/predictions/dev/*` and ["Scoring function"](./docs/mosquito_event_challenge.md) for reference.
+See `data/predictions/dev/*` and ["Scoring function"](./baseline-reproduction.md) for reference.
 
 
 ## Docker setup
