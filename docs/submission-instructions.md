@@ -3,7 +3,7 @@
 This repository contains a fully functional baseline model for the Humbug challenge, and docker template to submit code which is automatically evaluated and scored without user access to the test data.
 The code provides a starting point for creating a submission.
 
-Please refer to [Mosquito event challenge README](./docs/mosquito_event_challenge.md) for more detail on how to locally run the baseline, including feature extraction, model training, and evaluation over dev data.
+Please refer to [Mosquito event challenge README](./baseline-instructions.md) for more detail on how to locally run the baseline, including feature extraction, model training, and evaluation over dev data.
 
 
 ## Submission guidelines
