@@ -10,7 +10,7 @@ title = {{The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocal
 booktitle = {{Proceedings ACM Multimedia 2022}},
 year = {2022},
 address = {Lisbon, Portugal},
-publisher = {ISCA},
+publisher = {ACM},
 month = {October},
 note = {to appear},
 }
