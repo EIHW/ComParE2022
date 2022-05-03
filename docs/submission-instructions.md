@@ -20,18 +20,22 @@ The following folders and files *must* be used as described below:
 - `src/predict.py`: prediction script; perform inference here
   - This script will be invoked with no parameters by the evaluation engine
 - `data/audio/test`: input audio files; `src/predict.py` should read input data from here (see "Input format")
-  - This is where the evaluation engine will look place the test data for inference
+  - This is where the evaluation engine will place the test data for inference
 - `data/predictions/test`: output predictions; `src/predict.py` should write output data here (see "Expected output format")
   - This is where the evaluation engine will expect the prediction outputs to be
 - `models`: store your model files / checkpoints here; `src/predict.py` should load model / model weights from here
 - `SUBMISSION_README.md`: add any additional information you'd like to share as part of your submission here
 
 ### Input format
-Files stored in `data/audio` with the `.wav` extension.
+Files stored in `data/audio/test` with the `.wav` extension.
+
+Feel free to use any other path for development, but make sure the code that you submit reads input data from here.
 
 ### Expected output format
 Files stored in `data/predictions/test` with names in the form of `baseline_<threshold>.csv`, where threshold is between `[0.1, 1.0]` in increments of `0.1`.
 See `data/predictions/dev/*` and ["Scoring function"](./baseline-reproduction.md) for reference.
+
+Feel free to write outputs to any other path for development, but make sure the code that you submit writes output data to here.
 
 
 ## Docker setup
