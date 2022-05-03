@@ -35,7 +35,7 @@ Feel free to use any other path for development, but make sure the code that you
 Files stored in `data/predictions/test` with names in the form of `baseline_<threshold>.csv`, where threshold is between `[0.1, 1.0]` in increments of `0.1`.
 See `data/predictions/dev/*` and ["Scoring function"](./baseline-reproduction.md) for reference.
 
-Feel free to write outputs to any other path for development, but make sure the code that you submit writes output data to here.
+Feel free to write outputs to any other path for development, but make sure the code that you submit writes output data here.
 
 
 ## Docker setup
