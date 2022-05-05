@@ -21,7 +21,7 @@ Test_0002.csv;walking
 
 Each registered team has up to five (5) submissions for this Sub-Challenge.
 
-To submit your csv files, login on the website: http://www5.cs.fau.de/compare/
+To submit your csv files, login on the website: https://lme22.cs.fau.de/compare/ 
 with the credentials you received from the organisers.
 
 More information on the challenge: http://www.compare.openaudio.eu/2022-2/
