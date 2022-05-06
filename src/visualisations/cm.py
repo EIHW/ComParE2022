@@ -9,6 +9,8 @@ import seaborn as sns
 from sklearn.metrics import confusion_matrix
 from glob import glob
 
+plt.rcParams['font.size'] = '18'
+
 def cm_analysis(y_true, y_pred, filename, labels, ymap=None, figsize=(10,10)):
     """
     Generate matrix plot of confusion matrix with pretty annotations.
@@ -40,11 +42,13 @@ def cm_analysis(y_true, y_pred, filename, labels, ymap=None, figsize=(10,10)):
             p = cm_perc[i, j]
             if i == j:
                 s = cm_sum[i]
-                annot[i, j] = '%.1f%%\n%d/%d' % (p, c, s)
+                # annot[i, j] = '%.1f%%\n%d/%d' % (p, c, s)
+                annot[i, j] = '%.1f%%' % (p)
             # elif c == 0:
             #     annot[i, j] = ''
             else:
-                annot[i, j] = '%.1f%%\n%d' % (p, c)
+                annot[i, j] = '%.1f%%' % (p)
+                # annot[i, j] = '%.1f%%\n%d' % (p, c)
     cm = pd.DataFrame(cm_perc, index=labels, columns=labels)
     cm.index.name = 'Actual'
     cm.columns.name = 'Predicted'
