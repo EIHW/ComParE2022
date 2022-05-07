@@ -7,7 +7,7 @@ This repository provides the code for running the official baselines for ComParE
 @inproceedings{Schuller21-TAM,
 author = {Bj\”orn W.\ Schuller and Anton Batliner and Shahin Amiriparian and Christian Bergler and Maurice Gerczuk and Natalie Holz and Pauline Larrouy-Maestri and Sebastian Bayerl and Korbinian Riedhammer and Adria Mallol-Ragolta and Maria Pateraki and Harry Coppock and Ivan Kiskin and Stephen Roberts},
 title = {{The ACM Multimedia 2022 Computational Paralinguistics Challenge: Vocalisations, Stuttering, Activity, \& Mosquitos}},
-booktitle = {{Proceedings ACM Multimedia 2022}},
+booktitle = {{Proceedings of 30th International Conference on Multimedia}},
 year = {2022},
 address = {Lisbon, Portugal},
 publisher = {ACM},
