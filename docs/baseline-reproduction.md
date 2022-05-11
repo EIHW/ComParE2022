@@ -15,7 +15,7 @@ Please note, this baseline is heavily based on [HumBugDB](https://github.com/Hum
 * `data/predictions/dev`: Predictions for `dev` with the supplied baseline, to match the syntax as used in the labels.
 
 ### How to run
-* Extract data from [Zenodo](10.5281/zenodo.6478589) to `/data/audio`.
+* Extract data from [Zenodo](https://zenodo.org/record/6478589) to `/data/audio`.
 *   ```
     python run_baseline.py
     ```
@@ -38,7 +38,7 @@ The expected outputs, as defaulted in `config.py` are:
 
 
 ## Data 
-The data is documented in depth in our [NeurIPS 2021 paper](https://arxiv.org/abs/2110.07607v1), with a snapshot of useful metadata given in `data/metadata`. The interested user may consult each individual experiment that provides data, and cross-reference with the metadata supplied, to for-example sub-select or augment certain sources of data and/or weight their importance unequally. Please note, that the `dev` data for this task consists of `Test A` and `Test B` from HumBugDB, with the addition of challenging negatives to `Test A`. The results are therefore strongly correlated, but not identical in this challenge. The `train` data is identical. The difference of data/metadata can be seen by comparing the revision [0.0.1](https://zenodo.org/record/4904800) and [0.0.2](10.5281/zenodo.6478589) on Zenodo.  To reproduce the _metrics_ of that paper, run `run_baseline.py` with `extra_eval` set to `True`, or run the appropriate cells in the Jupyter notebook.
+The data is documented in depth in our [NeurIPS 2021 paper](https://arxiv.org/abs/2110.07607v1), with a snapshot of useful metadata given in `data/metadata`. The interested user may consult each individual experiment that provides data, and cross-reference with the metadata supplied, to for-example sub-select or augment certain sources of data and/or weight their importance unequally. Please note, that the `dev` data for this task consists of `Test A` and `Test B` from HumBugDB, with the addition of challenging negatives to `Test A`. The results are therefore strongly correlated, but not identical in this challenge. The `train` data is identical. The difference of data/metadata can be seen by comparing the revision [0.0.1](https://zenodo.org/record/4904800) and [0.0.2](https://zenodo.org/record/6478589) on Zenodo.  To reproduce the _metrics_ of that paper, run `run_baseline.py` with `extra_eval` set to `True`, or run the appropriate cells in the Jupyter notebook.
 
 ## Baseline model
 
