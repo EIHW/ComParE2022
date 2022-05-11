@@ -29,7 +29,7 @@ Your participation in this challenge can directly help to address our primary re
 Our data has been laboriously curated through 6+ years of data collection, which we have split into `train`, `dev`, and `test`. All of our `test` data is recorded in people's homes from various mosquito intervention solutions (e.g. HumBug bednets as detailed in [HumBugDB](https://arxiv.org/pdf/2110.07607.pdf)), which are used as a form of aid that can additionally provide us the opportunity to monitor and detect lethal mosquitoes from the sounds of their wingbeat. As the nature of the data is sensitive, this challenge _does not provide_ the `test` data directly, however, submissions are designed to evaluate over the test data. This allows preservation of data privacy, and removes the possibility of consciously or subconsciously tuning model design with knowledge of test data.
 
 ## Submission instructions
-1. Sign End-user License Agreement (EULA) [TBA]
+1. Sign [End-user License Agreement (EULA)](./docs/EULA_HumBugChallenge.pdf) and return to e-mail addresses as stated in the EULA.
 2. Develop code according to instructions of [the submission template README](./docs/submission-instructions.md).
 3. Run `make_submission.sh`
 4. Upload resulting `submission.zip` to https://humbug.aml.mindfoundry.ai/.
