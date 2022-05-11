@@ -27,7 +27,8 @@ the mosquito species, allowing targeted and effective vector control.
 Your participation in this challenge can directly help to address our primary research question of detecting acoustic mosquito events for further downstream processing. The code has been ported from our deployed server, which has run the baseline model to successfully aid entomologists to study important properties of mosquito behaviour. Therefore, **any solutions you develop can be used directly in our deployment scenario, and your work will be appropriately credited for all subsequent research**. If you would like to read more about how we use this data and code, refer to [NeurIPS: HumBugDB: A large-scale acoustic mosquito dataset](https://arxiv.org/pdf/2110.07607.pdf), [ECML-PKDD: Automatic Acoustic Tagging with BNNs](https://link.springer.com/chapter/10.1007/978-3-030-86514-6_22).
 
 ### Data 
-https://zenodo.org/record/6478589
+* `train` and `dev` available openly on: https://zenodo.org/record/6478589
+
 Our data has been laboriously curated through 6+ years of data collection, which we have split into `train`, `dev`, and `test`. All of our `test` data is recorded in people's homes from various mosquito intervention solutions (e.g. HumBug bednets as detailed in [HumBugDB](https://arxiv.org/pdf/2110.07607.pdf)), which are used as a form of aid that can additionally provide us the opportunity to monitor and detect lethal mosquitoes from the sounds of their wingbeat. As the nature of the data is sensitive, this challenge _does not provide_ the `test` data directly, however, submissions are designed to evaluate over the test data. This allows preservation of data privacy, and removes the possibility of consciously or subconsciously tuning model design with knowledge of test data.
 
 ## Submission instructions
