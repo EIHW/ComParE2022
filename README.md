@@ -40,4 +40,4 @@ Our data has been laboriously curated through 6+ years of data collection, which
 6. The scores on `test` will be revealed at the end of the challenge
 
 ## Support
-Feel free to join our Slack channel on [] for help with setting up environments, or to clarify any potential issues. Alternatively, you may contact `ivankiskin1 AT gmail DOT com` directly.
+Feel free to join our Slack channel on https://join.slack.com/t/compare-2022/shared_invite/zt-18jw9bstz-aYY6RmfuBR5WKZIzJxIQvA for help with setting up environments, or to clarify any potential issues. Alternatively, you may contact `ivankiskin1 AT gmail DOT com` directly.
